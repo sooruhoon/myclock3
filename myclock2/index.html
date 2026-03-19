@@ -1,0 +1,138 @@
+ï»¿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>PUP-CLOCK! Kinetic Pop Classroom</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Spline+Sans:wght@300..700&display=swap" rel="stylesheet"/>
+    <style>
+        .halftone-overlay {
+            background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+            background-size: 6px 6px;
+        }
+        /* ÄY®æ°õ¦æ DESIGN.md ªºµwÃä³±¼v */
+        .ink-shadow {
+            box-shadow: 8px 8px 0px 0px #000000;
+        }
+        .ink-shadow-sm {
+            box-shadow: 4px 4px 0px 0px #000000;
+        }
+        .text-stroke {
+            -webkit-text-stroke: 3px black;
+        }
+        .bg-comic-dots {
+            background-color: #f6f6f6;
+            background-image: radial-gradient(#adadad 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        /* º©µe­·®æªº¶É±×»P¦ì²¾ */
+        .action-offset {
+            transform: rotate(-1deg) translate(-2px, -2px);
+        }
+    </style>
+    <script id="tailwind-config">
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#b30065",         /* Action Pink */
+              "primary-container": "#ff6ea9",
+              "secondary-container": "#00fbfb", /* Electric Cyan */
+              "tertiary-fixed": "#ffff00",     /* High-Lighter Yellow */
+              "background": "#f6f6f6",
+              "on-background": "#2f2f2f",
+              "outline-variant": "#adadad"
+            },
+            fontFamily: {
+              "headline": ["Spline Sans"],
+              "body": ["Plus Jakarta Sans"]
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body overflow-hidden">
+
+<main class="min-h-screen relative flex items-center justify-center bg-comic-dots p-4">
+    
+    <div class="absolute inset-0 pointer-events-none overflow-hidden opacity-30">
+        <img class="absolute -top-10 -left-10 w-[30rem] rotate-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB816hXHYJte3NlYWBdRcnbGGbV5Ut9HYx3D-pVnr3F_smiVFQGTTtwsdcIEeDJtsEPfwG9MxzwMR-Dg_2FE2Q02okpPt0eIspag6VAaEnzcE-oC-VgM8c0WeNLTCHndBWRp6faVhxkGhM9USUqTTSY9T3o9K3-WJmtdTISE3RpPxAzGCyBBlxgMwjHqyI6QMlJXXwPOnFI89ENFyACynL2JeAEu1yM6zVJkSeUw4YUp7U5JHdOW8tNWkjC9HIthHCYEQKMZqvLaI8"/>
+        <img class="absolute bottom-0 -right-20 w-[35rem] -rotate-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAloQ_wQMLmLAKVmvo2TLVgGWYhDM6vWGslYsG8MlxBIPNOXDNJEcJGX72xz4V9B48AoOY2jQLLnn-LrTBw2ISOxa4MEdk30IOLwUDVsY03Vg0TXIeV_8saQ_UWm3swpJryNTAz1Tce4NoKVFP_J9a5W6_l-Re2vi3YTYY9MJApUalU_qq6E9-hFcKLZ0g1g0gyhIG9_Oh6V6Bc-JL8cNnLdL4-5QbBQM_K5RbuFazKFN5LcSjEZUj_sqh1CxBoWYsdfFovYhXOMAk"/>
+    </div>
+
+    <div class="absolute top-10 left-10 w-40 rotate-[-5deg] z-20">
+        <div class="bg-white p-2 border-4 border-black ink-shadow-sm">
+            <img class="w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy4pLxbCbMOsm0nPu9uUfaw39hUSds602n82vWhasT3sE8_92XRcIrwi6u-QPuz8ERTTMw-_dID-6phacv2bSbhajUjPy7In9z299qakB743sgjdlI7YUYZS6j4xQTlnqf2YTBXsD30s1BQZj57tZC18NPwNemLfScYZ7YF0ZudV-ytTUyjQfMdaa4BjU4wRnXOGe0m8roKEvDx_PEJHElYhzyev1Kn3R9d6UFBDH0FgiqS4pJPU5AYgTjpUou_Z-ZC0A3Zs2tbRo"/>
+            <div class="absolute -top-6 -right-6 bg-tertiary-fixed border-2 border-black px-3 py-1 font-black text-sm ink-shadow-sm">WHOOSH!</div>
+        </div>
+    </div>
+
+    <div class="relative z-10 flex flex-col items-center w-full max-w-6xl">
+        
+        <div class="bg-tertiary-fixed text-black font-headline font-black text-2xl md:text-4xl px-10 py-4 mb-12 rotate-[-2deg] border-4 border-black ink-shadow uppercase tracking-tighter">
+            Classroom Time!
+        </div>
+
+        <div class="relative w-full action-offset">
+            <div class="bg-white p-8 md:p-16 border-[8px] border-black ink-shadow relative overflow-hidden">
+                
+                <div class="absolute inset-0 halftone-overlay text-outline-variant opacity-10"></div>
+                
+                <div id="clock" class="relative flex flex-wrap items-center justify-center gap-2 md:gap-6 font-headline font-black text-6xl md:text-[14rem] tracking-tighter">
+                    
+                    <div class="flex flex-col items-center">
+                        <span id="hours" class="text-primary text-stroke drop-shadow-[8px_8px_0px_rgba(0,0,0,1)]">12</span>
+                        <span class="text-xs font-bold bg-black text-white px-3 py-1 mt-2 rotate-1">HOURS</span>
+                    </div>
+
+                    <div class="text-black self-center mb-8 opacity-40 text-4xl md:text-8xl">¡´<br>¡´</div>
+
+                    <div class="flex flex-col items-center">
+                        <span id="minutes" class="text-tertiary-fixed text-stroke drop-shadow-[8px_8px_0px_rgba(0,0,0,1)]">45</span>
+                        <span class="text-xs font-bold bg-black text-white px-3 py-1 mt-2 -rotate-1">MINS</span>
+                    </div>
+
+                    <div class="text-black self-center mb-8 opacity-40 text-4xl md:text-8xl">¡´<br>¡´</div>
+
+                    <div class="flex flex-col items-center">
+                        <span id="seconds" class="text-secondary-container text-stroke text-4xl md:text-[8rem] drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">30</span>
+                        <span class="text-[10px] font-bold bg-black text-white px-2 py-0.5 mt-2">SECS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute -top-8 -right-8 bg-primary-container text-black p-4 rounded-full border-4 border-black ink-shadow-sm font-black text-xl rotate-12">
+                TICK!
+            </div>
+            <div class="absolute -bottom-8 -left-8 bg-secondary-container text-black p-4 border-4 border-black ink-shadow-sm font-black text-xl -rotate-12">
+                TOCK!
+            </div>
+        </div>
+    </div>
+
+    <div class="absolute bottom-10 right-10 w-48 rotate-[3deg] hidden md:block">
+        <div class="bg-white p-2 border-4 border-black ink-shadow-sm">
+            <img class="w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxA8dYz5qmbxvIuqfxSeTHY3j46Fyq3zjyOppJT_TiBt7M1vAz-quEX0vInKVZmFRpF6XnyfAKYHWo4EZmSE7C6QHG2FkNzKmmE62jM8F5AUvYNthRT_imoEmx9JBNVKz8pzCtaNhzoIC4sl7N9SvELlgQFBZl12rtXmgY2Pdz1QAEvjw_ZGy-Q0mV4HdcxtlXsSnm4Qkkoi3W2voq8qA4fSIw-28zQDn5WcRetiDJymuticsp18YKc7o9QX61a3zfdQ4PDtodIOI"/>
+            <div class="absolute -bottom-4 -left-6 bg-secondary-container border-2 border-black px-4 py-1 font-black ink-shadow-sm">POW!</div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function updateClock() {
+        const now = new Date();
+        const h = String(now.getHours()).padStart(2, '0');
+        const m = String(now.getMinutes()).padStart(2, '0');
+        const s = String(now.getSeconds()).padStart(2, '0');
+        
+        document.getElementById('hours').textContent = h;
+        document.getElementById('minutes').textContent = m;
+        document.getElementById('seconds').textContent = s;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+</body>
+</html>
